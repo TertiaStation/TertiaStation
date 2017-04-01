@@ -13,6 +13,7 @@
 	config_tag = "traitor"
 	required_players = 0
 	required_enemies = 1
+	probability = 3
 	antag_tags = list(MODE_TRAITOR)
 	antag_scaling_coeff = 5
 	end_on_antag_death = 0
