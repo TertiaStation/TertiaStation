@@ -196,3 +196,5 @@
 #define EASTDOWN (EAST|DOWN)
 #define SOUTHDOWN (SOUTH|DOWN)
 #define WESTDOWN (WEST|DOWN)
+
+#define DEFAULT_EMAIL_DOMAIN "freemail.nt"

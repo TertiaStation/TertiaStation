@@ -75,7 +75,7 @@ var/datum/mil_branches/mil_branches = new()
 /datum/mil_branch
 	var/name = "Unknown"         // Longer name for branch, eg "Sol Central Marine Corps"
 	var/name_short = "N/A"       // Abbreviation of the name, eg "SCMC"
-
+	var/email_domain = DEFAULT_EMAIL_DOMAIN
 
 
 	var/list/ranks // Associative list of full rank names to the corresponding
