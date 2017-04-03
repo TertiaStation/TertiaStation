@@ -499,21 +499,6 @@ var/list/gamemode_cache = list()
 				if("use_cortical_stacks")
 					config.use_cortical_stacks = 1
 
-				if ("probability")
-					var/prob_pos = findtext(value, " ")
-					var/prob_name = null
-					var/prob_value = null
-
-					if (prob_pos)
-						prob_name = lowertext(copytext(value, 1, prob_pos))
-						prob_value = copytext(value, prob_pos + 1)
-						if (prob_name in config.modes)
-							config.probabilities[prob_name] = text2num(prob_value)
-						else
-							log_misc("Unknown game mode probability configuration definition: [prob_name].")
-					else
-						log_misc("Incorrect probability configuration definition: [prob_name]  [prob_value].")
-
 				if("allow_random_events")
 					config.allow_random_events = 1
 

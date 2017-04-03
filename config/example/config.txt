@@ -92,19 +92,6 @@ MOD_TEMPBAN_MAX 1440
 ## Maximum mod job tempban duration (in minutes)
 MOD_JOB_TEMPBAN_MAX 1440
 
-
-## probablities for game modes chosen in "secret" and "random" modes
-## 
-## default probablity is 1, increase to make that mode more likely to be picked
-## set to 0 to disable that mode
-PROBABILITY EXTENDED 1
-PROBABILITY MALFUNCTION 1
-PROBABILITY MERCENARY 1
-PROBABILITY WIZARD 1
-PROBABILITY CHANGELING 1
-PROBABILITY CULT 1
-PROBABILITY EXTEND-A-TRAITORMONGOUS 6
-
 ## Hash out to disable random events during the round.
 ALLOW_RANDOM_EVENTS
 

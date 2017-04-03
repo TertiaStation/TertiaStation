@@ -102,7 +102,9 @@ var/global/datum/controller/gameticker/ticker
 			var/list/weighted_modes = list()
 			for(var/datum/game_mode/GM in runnable_modes)
 				weighted_modes[GM.config_tag] = config.probabilities[GM.config_tag]
+				world << "TEST: Gamemode with tag [GM.config_tag] has probability [config.probabilities[GM.config_tag]]"
 			src.mode = gamemode_cache[pickweight(weighted_modes)]
+			world << "TEST: Gamemode [src.mode] has been picked."
 	else
 		src.mode = config.pick_mode(master_mode)
 

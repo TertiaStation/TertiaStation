@@ -1,0 +1,6 @@
+author: Atlantiscze
+delete-after: True
+
+changes: 
+  - tweak: "Gamemode probabilities are now code based, rather than config based, and may therefore be influenced by changing the code (rather than config)."
+  - rscdel: "Removed mixed antag gamemodes."
