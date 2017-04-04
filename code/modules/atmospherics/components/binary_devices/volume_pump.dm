@@ -12,6 +12,14 @@
 	use_power = 1
 	icon_state = "map_on"
 
+/obj/machinery/atmospherics/binary/pump/high_power/on/max_pressure/New()
+	..()
+	target_pressure = max_pressure_setting
+
+/obj/machinery/atmospherics/binary/pump/high_power/on/distribution/New()
+	..()
+	target_pressure = 3 * ONE_ATMOSPHERE
+
 /obj/machinery/atmospherics/binary/pump/high_power/update_icon()
 	if(!powered())
 		icon_state = "off"
