@@ -12,8 +12,7 @@ env:
 # IF THEY ARE NOT, YOUR BUILD WILL FAIL
   matrix:
     - MAP_PATH=example
-    - MAP_PATH=exodus
-    - MAP_PATH=torch
+    - MAP_PATH=exodus-tertia
     - MAP_PATH=overmap_example
 
 cache:

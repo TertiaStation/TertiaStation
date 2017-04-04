@@ -64,8 +64,8 @@
 	icon_state = "map_vent_in"
 	external_pressure_bound = 0
 	external_pressure_bound_default = 0
-	internal_pressure_bound = 2000
-	internal_pressure_bound_default = 2000
+	internal_pressure_bound = PUMP_MAX_PRESSURE
+	internal_pressure_bound_default = PUMP_MAX_PRESSURE
 	pressure_checks = 2
 	pressure_checks_default = 2
 
