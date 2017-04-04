@@ -2,20 +2,20 @@
 /datum/map/exodus_tertia
 	name = "Exodus"
 	full_name = "NSS Exodus"
-	path = "exodus"
+	path = "exodus-tertia"
 
-	lobby_icon = 'maps/exodus/exodus_lobby.dmi'
+	lobby_icon = 'maps/exodus-tertia/exodus_lobby.dmi'
 
 	load_legacy_saves = TRUE
 
-	station_levels = list(1, 2)
-	admin_levels = list(3)
-	contact_levels = list(1,2,4,6)
-	player_levels = list(1,2,4,5,6,7)
-	sealed_levels = list(6)
-	empty_levels = list(6)
-	accessible_z_levels = list("1" = 5, "2" = 5, "4" = 10, "5" = 15, "7" = 60)
-	base_turf_by_z = list("6" = /turf/simulated/floor/asteroid) // Moonbase
+	station_levels = list(1)
+	admin_levels = list(2)
+	contact_levels = list(1,3,5)
+	player_levels = list(1,3,4,5,6)
+	sealed_levels = list(5)
+	empty_levels = list(5)
+	accessible_z_levels = list("1" = 5, "3" = 10, "4" = 15, "6" = 60)
+	base_turf_by_z = list("5" = /turf/simulated/floor/asteroid) // Moonbase
 
 	station_name  = "NSS Exodus"
 	station_short = "Exodus"
@@ -37,7 +37,7 @@
 
 	evac_controller_type = /datum/evacuation_controller/shuttle
 
-/datum/map/exodus/perform_map_generation()
-	new /datum/random_map/automata/cave_system(null, 1, 1, 6, 255, 255) // Create the mining Z-level.
-	new /datum/random_map/noise/ore(null, 1, 1, 6, 64, 64)         // Create the mining ore distribution map.
+/datum/map/exodus_tertia/perform_map_generation()
+	new /datum/random_map/automata/cave_system(null, 1, 1, 5, 255, 255) // Create the mining Z-level.
+	new /datum/random_map/noise/ore(null, 1, 1, 5, 64, 64)         // Create the mining ore distribution map.
 	return 1
