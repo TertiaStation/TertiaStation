@@ -37,7 +37,7 @@ var/global/nttransfer_uid = 0
 			// Transfer speed is limited by device which uses slower connectivity.
 			// We can have multiple clients downloading at same time, but let's assume we use some sort of multicast transfer
 			// so they can all run on same speed.
-			C.actual_netspeed = min(C.download_netspeed, download_netspeed)
+			C.actual_netspeed = min(C.ntnet_speed, ntnet_speed)
 			C.download_completion += C.actual_netspeed
 			if(C.download_completion >= provided_file.size)
 				C.finish_download()
@@ -54,18 +54,6 @@ var/global/nttransfer_uid = 0
 			P.crash_download("Connection terminated by remote server")
 		downloaded_file = null
 	..(forced)
-
-
-
-/datum/computer_file/program/nttransfer/proc/update_netspeed()
-	download_netspeed = 0
-	switch(ntnet_status)
-		if(1)
-			download_netspeed = NTNETSPEED_LOWSIGNAL
-		if(2)
-			download_netspeed = NTNETSPEED_HIGHSIGNAL
-		if(3)
-			download_netspeed = NTNETSPEED_ETHERNET
 
 // Finishes download and attempts to store the file on HDD
 /datum/computer_file/program/nttransfer/proc/finish_download()
